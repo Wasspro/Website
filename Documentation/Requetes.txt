@@ -1,0 +1,51 @@
+Table reservation :
+INSERT INTO reservation VALUES('10048','riad','ladjel')
+
+Table buffet :
+INSERT INTO buffet VALUES('1','paris','10048')
+
+Table menu :
+INSERT INTO menu VALUES('soupe','tajine','tarte-tatin','10048')
+
+Table invitation :
+Vérifier si l'identifiant existe dans ma table : 
+SELECT * 
+FROM invitation 
+WHERE idinvitation = 10048
+
+Selectionne l'id des personnes ayant choisi comme soupe en entrée :
+SELECT idreservation 
+FROM menu 
+WHERE entree = soupe
+
+Regroupe les personnes ayant la même entree renseigné et ayant un id supérieur à 10045 :
+SELECT * 
+FROM menu 
+WHERE idreservation > 10045 
+GROUPBY entree
+
+Regroupe le nom des villes par ordre alphabétique :
+SELECT * 
+FROM buffet
+ORDER BY ville ASC
+
+Selectionne le nom de la personne ayant réservée a la table numéro 1 apparaissant dans les deux tables :
+SELECT nom
+FROM reservation AS r, buffet AS b
+WHERE b.numtable = 1 and b.idreservation = r.idreservation
+
+Delectionne le nom et prenom de la personne venant a Paris
+SELECT nom,prenom
+FROM buffet AS b, reservation AS r
+WHERE B.ville = 'paris' AND b.idreservation = r.idreservation
+
+Permet de faire la jointure entre la table reservation et menu mais également d'afficher les informations correpondantes aux idreservation :
+SELECT *
+FROM reservation AS r 
+INNER JOIN menu AS m
+WHERE r.idreservation =  m.idreservation
+
+Affiche les lignes 3 et 4 de la table buffet :
+SELECT * 
+FROM buffet
+LIMIT 2,4;

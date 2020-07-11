@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset= "utf-8">
+		<link rel="stylesheet" href="style.css" />
+		<title>Reservation</title>
+	</head>
+
+		<body>
+			<h2>Espace réservation</h2>
+
+			  <div id="navigation">
+					<ul class="menu">
+						<li><a href="Accueil.html">Accueil</a></li>
+						<li><a href="Programme.html">Programme</a></li>
+						<li><a href="Menu.html">Menu</a></li>
+						<li><a href="Reservation.html">Réservation</a></li>
+					</ul>
+				</div>
+		
+		<h2>Réservation pour le menu de Paris</h2>
+
+		<form method="post" action="insert_reservation_paris.php">
+
+			<div id="res">
+					<ul class="resparis">
+						<label for="nom">Nom : </label>
+						<input type="text" name="nom" id="nom"> <br>
+						
+						<label for="prenom">Prenom : </label>
+						<input type="text" name="prenom" id="prenom"><br>
+					</ul>
+				</div>
+
+				<h2>Veuillez choisir votre menu :</h2>
+
+				<div id="res">
+					<ul class="resparis">
+						<label>Entrée :</label> <br><br>
+						<input type="radio" name="entree" value="Tatin de magret de canard au foie gras" /> Tatin de magret de canard au foie gras <br>
+						<input type="radio" name="entree" value="Veloute de carottes au cumin" /> Velouté de carottes au cumin <br>
+						<input type="radio" name="entree" value="Roulade de saumon fume aux asperges" /> Roulade de saumon fumé aux asperges <br><br>
+						
+						<label>Plat :</label> <br><br>
+						<input type="radio" name="plat" value="Lasagnes a la bolognaise" /> Lasagnes à la bolognaise <br>
+						<input type="radio" name="plat" value="Papillote de saumon a la mozzarella" /> Papillote de saumon à la mozzarella <br>
+						<input type="radio" name="plat" value="Tartiflette" /> Tartiflette <br><br>
+
+						<label>Dessert :</label> <br><br>
+						<input type="radio" name="dessert" value="Ramequins fondants au chocolat" /> Ramequins fondants au chocolat <br>
+						<input type="radio" name="dessert" value="Pain aux epices" /> Pain d'épices <br>
+						<input type="radio" name="dessert" value="Tarte aux pommes" /> Tarte aux pommes <br><br>
+					</ul>
+				</div>
+
+				<h2>Veuillez choisir votre table :</h2>
+
+				<div id="res">
+					<ul class="resparis">
+						<label>Table :</label> <br><br>
+						<input type="radio" name="numtable" value="1" /> Table 1 <br>
+						<input type="radio" name="numtable" value="2" /> Table 2 <br>
+						<input type="radio" name="numtable" value="3" /> Table 3 <br>
+						<input type="radio" name="numtable" value="3" /> Table 4 <br>
+						<input type="radio" name="numtable" value="3" /> Table 5 <br><br>
+						
+						<input type="submit" value="Reserver" />
+					</ul>
+				</div>
+				
+				</form>
+			
+		</body>
+</html>
